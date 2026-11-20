@@ -1,0 +1,13 @@
+{
+  "_doc": "Copy to config/deadlines.json. 'matter' must appear in the folder path of that matter's files (e.g. matters/example-matter/). 'keywords' adds extra path fragments. A status containing PASSED, COMPLETE, DONE or CLOSED is ignored.",
+  "deadlines": [
+    {
+      "id": "EXAMPLE-PROTOCOL",
+      "matter": "example-matter",
+      "keywords": [],
+      "description": "File the case protocol",
+      "date": "2027-03-01T23:59:00-05:00",
+      "status": "ACTIVE"
+    }
+  ]
+}

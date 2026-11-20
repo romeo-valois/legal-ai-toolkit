@@ -1,0 +1,19 @@
+{
+  "_doc": "Optional Gmail add-on. Copy to .kb/gmail.json and fill in accounts. Read-only; logins live in each gws config folder, never here. See README > Email.",
+  "backfill": "newer_than:180d",
+  "base_query": "-in:spam -in:trash -in:chats -category:promotions -category:social -category:forums",
+  "accounts": [
+    {"name": "you@example.com", "gws_config": "~/.config/gws", "domain": "email"}
+  ],
+  "_keep_header_doc": "Optional regex. Always keep a thread if a From/To/Cc/Reply-To header matches, e.g. a client's domain: \"clientco\\\\.com|otherclient\\\\.io\"",
+  "keep_header_pattern": "",
+  "allow_sender_domains": [
+    "stripe.com", "paypal.com", "wise.com", "americanexpress.com",
+    "calendly.com", "zoom.us", "docusign.net", "notion.so", "slack.com", "github.com", "upwork.com"
+  ],
+  "_keep_subject_doc": "Kept even from bulk senders: a person or biller asking something of you.",
+  "keep_subject": "sent you a message|follow-?up questions|next steps|interview|schedule a call|book a (call|time)|offer letter|invoice|bill is ready|payment (due|reminder|failed)|overdue|past due|renewal",
+  "skip_subject": "verification code|verify your|password reset|reset your password|sign-?in code|log-?in code|one-time|security code|2fa|two-factor|2-step|confirm your email|new sign-?in|security alert",
+  "_never_store_doc": "Threads matching this (subject, sender or body) are never stored. Default walls off legal mail. Set to \"\" to turn off.",
+  "never_store": "\\b(lawyers?|attorneys?|notary|tribunal|superior court|small claims|litigation|subpoena|bailiff|plaintiff|defendant|estate of|executor)\\b"
+}

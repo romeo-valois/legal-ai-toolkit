@@ -1,0 +1,15 @@
+# Copy to config/fact-changes.yaml. One entry per corrected fact.
+# The validator warns on any file that still contains old_value while
+# propagation_status is "incomplete" or "deferred".
+fact_changes:
+  - id: "FC-001"
+    date: "2026-01-15"
+    field: "Date of the formal notice"
+    old_value: "March 8, 2025"
+    new_value: "March 3, 2025"
+    source: "Registered-mail receipt"
+    canonical_authority: "matters/example-matter/evidence/notice-receipt.pdf"
+    propagation_status: "incomplete"  # incomplete | deferred | complete
+    files_updated: []
+    files_marked_superseded: []
+    files_deferred: []
